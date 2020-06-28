@@ -7,6 +7,7 @@ import org.apache.dubbo.config.RegistryConfig;
 import org.apache.dubbo.config.ServiceConfig;
 
 import java.io.IOException;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 服务暴露
@@ -37,6 +38,9 @@ public class ApiProviderExport {
         serviceConfig.export();
         System.out.println("执行成功");
         System.in.read();
+
+        ConcurrentHashMap<String,Object> c = new ConcurrentHashMap<>(10);
+
     }
 
 }

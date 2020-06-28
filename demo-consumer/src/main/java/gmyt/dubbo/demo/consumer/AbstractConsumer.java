@@ -21,5 +21,11 @@ public abstract class AbstractConsumer<T> {
     public DemoService getService(){
         return (DemoService)referenceConfig.get();
     }
+
+    /**
+     * 各场景处理器
+     * @param s
+     * @return
+     */
     protected abstract boolean hanlder(String s);
 }
